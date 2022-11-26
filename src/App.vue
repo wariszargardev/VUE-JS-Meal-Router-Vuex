@@ -1,9 +1,15 @@
 <template>
+  <Header />
   <router-view />
 </template>
 
-<script setup>
+<script>
+import Header from "./views/layouts/Header.vue";
 
+export default {
+  name: "home",
+  components: {Header},
+}
 </script>
 
 <style scoped>
