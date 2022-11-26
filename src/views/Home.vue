@@ -1,11 +1,15 @@
 <template>
-  <h1>Home</h1>
+  <pre>
+    {{ meals }}
+  </pre>
 </template>
 
-<script>
-export default {
-  name: "Home"
-}
+<script setup>
+import {computed} from "vue";
+import store from "../store/index.js";
+
+const meals= computed( () => store.state.meals)
+
 </script>
 
 <style scoped>
